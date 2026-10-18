@@ -9,7 +9,7 @@ Hecho por **Sliu/LX772**, sobre el trabajo de **z3xox** ([Tenkaichi3Decomp](http
 ## Estado (beta v1.0.1)
 - Juego completo probado en iPhone real: menús, modo historia y peleas a la velocidad original (30 fps).
 - Controles táctiles y mando (Bluetooth/USB) compatibles.
-- Online: salas por código y partidas por dirección. *(quick match: en revisión)*
+- Online: quick match, salas por código y partidas por dirección.
 
 ## Requisitos
 - iPhone o iPad con **iOS 15** o superior.

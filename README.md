@@ -39,7 +39,7 @@ Tus partidas, ajustes y log del juego quedan en esa misma carpeta (`saves/`, `bt
 - Donaciones (PayPal): **Walkinogando98@gmail.com** — si el port te gustó y quieres apoyarlo, ¡gracias! 🙏
 
 ## Licencia
-- El código fuente correspondiente a este port está disponible en la rama `ios` de **[Tenkaichi3DecompAndroid](https://github.com/Sliu772/Tenkaichi3DecompAndroid/tree/ios)**: **AGPL-3.0** (ver `LICENSE`, heredado de Tenkaichi3Decomp desde su commit `06e4671`); el código anterior y partes de la app van bajo **MIT** (ver `LICENSE-MIT`). Las bibliotecas de `port/third_party/` mantienen sus propias licencias.
+- El código fuente correspondiente a este port está **disponible a solicitud** (ver «Contacto y donaciones» arriba): **AGPL-3.0** (ver `LICENSE`, heredado de Tenkaichi3Decomp desde su commit `06e4671`); el código anterior y partes de la app van bajo **MIT** (ver `LICENSE-MIT`). Las bibliotecas de `port/third_party/` mantienen sus propias licencias.
 - El código del juego decompilado (`src/`, `include/`) pertenece a los titulares de los derechos de Dragon Ball.
 - Este repositorio **no distribuye ningún recurso del juego**: necesitas tu propia copia obtenida legalmente.
 

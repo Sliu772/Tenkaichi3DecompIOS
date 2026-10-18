@@ -18,7 +18,7 @@ Hecho por **Sliu/LX772**, sobre el trabajo de **z3xox** ([Tenkaichi3Decomp](http
 - ⚠️ Este repositorio **no incluye ningún dato del juego**.
 
 ## Instalación
-1. Descarga **`BT3Online.ipa`** desde la página de **Releases** (beta v1.0.1) o desde el espejo en **[MediaFire](https://www.mediafire.com/file/9nqrxodxkjxyla1/BT3Online.ipa/file)**.
+1. Descarga **`BT3Online.ipa`** desde **[MediaFire](https://www.mediafire.com/file/9nqrxodxkjxyla1/BT3Online.ipa/file)**.
 2. Instálala con Sideloadly, AltStore o la herramienta que uses (se firma con tu certificado/Apple ID).
 3. En el iPhone: **Archivos → En mi iPhone → BT3 Online** y copia ahí tu ISO (solo `.iso`; si tienes `.bin/.cue`, conviértelo antes).
 4. Abre **BT3 Online**: la primera vez prepara los datos del juego con una pantalla de progreso. Cuando termine, ya puedes jugar.

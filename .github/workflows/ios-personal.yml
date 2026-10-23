@@ -1,0 +1,113 @@
+# Builds the personal iOS app of the private -dev repository on this public repository's runner: a public
+# repository's macOS minutes are free, which is what unblocks the build while the private account's Actions
+# spending limit is exhausted. The sources are checked out with a token kept in the DEV_TOKEN secret, so they
+# stay private; this repository only produces the run's artifacts and pushes nothing back.
+name: ios-personal
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          repository: Sliu772/Tenkaichi3DecompIOS-dev
+          ref: ai-specials
+          token: ${{ secrets.DEV_TOKEN }}
+          fetch-depth: 1
+
+      - name: Version header (the About card shows the build's own)
+        env:
+          BT3_IOS_VER: 1.0.109
+        run: |
+          {
+            printf '#define BT3_IOS_VER_STR "%s"\n' "$BT3_IOS_VER"
+            echo '#define BT3_PERSONAL 1'
+          } > port/src/gs/bt3_ios_ver.h
+
+      - name: Tools (LLVM 22 or newer, shaders, ninja)
+        run: |
+          brew install llvm shaderc spirv-cross ninja
+          echo "BT3_LLVM=$(brew --prefix llvm)/bin" >> "$GITHUB_ENV"
+          "$(brew --prefix llvm)/bin/clang" --version | head -1
+
+      - name: Python (libclang, for the pointer pass)
+        run: |
+          python3 -m venv "$GITHUB_WORKSPACE/.venv"
+          "$GITHUB_WORKSPACE/.venv/bin/pip" install --quiet libclang
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> "$GITHUB_PATH"
+
+      - name: SDL3 for iOS (static; 3.4.12, the version the Windows/Android builds use)
+        run: |
+          set -e
+          V=3.4.12
+          curl -fsSL -o sdl.tar.gz "https://github.com/libsdl-org/SDL/releases/download/release-$V/SDL3-$V.tar.gz"
+          tar -xzf sdl.tar.gz
+          cmake -S "SDL3-$V" -B sdl-build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_DEPLOYMENT_TARGET=15.0 \
+            -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_INSTALL_PREFIX="$GITHUB_WORKSPACE/sdl3-ios" \
+            -DSDL_SHARED=OFF -DSDL_STATIC=ON -DSDL_FRAMEWORK=OFF -DSDL_TESTS=OFF -DSDL_EXAMPLES=OFF
+          cmake --build sdl-build
+          cmake --install sdl-build
+          ls "$GITHUB_WORKSPACE/sdl3-ios/lib"
+          echo "BT3_SDL3=$GITHUB_WORKSPACE/sdl3-ios" >> "$GITHUB_ENV"
+
+      - name: Engine, link and app
+        env:
+          BT3_CC: ios64
+          BT3_SKELETON: "1"
+          BT3_BUILD_KEY: ${{ secrets.BT3_BUILD_KEY }}
+          BT3_IOS_VER: 1.0.109
+        run: |
+          set -o pipefail
+          { python3 port/tools/undefined.py && python3 port/tools/link.py && python3 port/tools/ios_app.py ; } 2>&1 | tee build.log
+
+      - name: No skipped files
+        run: |
+          if grep -q '^FAILED' build.log; then
+            echo "::error::the build skipped files; their code would be stubs in the .ipa"
+            grep '^FAILED' build.log | head -40
+            exit 1
+          fi
+
+      - name: The app
+        run: |
+          file port/build/bt3_ios
+          vtool -show-build port/build/bt3_ios
+          plutil -p port/build/ios/Payload/BT3Online.app/Info.plist
+          unzip -l port/build/ios/BT3Online.ipa
+          echo "still stubbed (head):"; head -20 port/build/stubs.txt
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo '### iOS build (tail of build.log)'
+            echo '```'
+            tail -80 build.log 2>/dev/null || echo 'no build.log'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bt3-ios-build-log
+          path: build.log
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: bt3-ipa
+          path: |
+            port/build/ios/BT3Online.ipa
+            port/build/bt3_ios
+            port/build/bt3_ios.dat
+            port/build/stubs.txt
+          if-no-files-found: error

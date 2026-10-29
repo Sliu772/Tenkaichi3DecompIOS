@@ -18,13 +18,13 @@ jobs:
       - uses: actions/checkout@v5
         with:
           repository: Sliu772/Tenkaichi3DecompIOS-dev
-          ref: ai-specials
+          ref: net-0.1.39
           token: ${{ secrets.DEV_TOKEN }}
           fetch-depth: 1
 
       - name: Version header (the About card shows the build's own)
         env:
-          BT3_IOS_VER: 1.0.112
+          BT3_IOS_VER: 1.0.129
         run: |
           {
             printf '#define BT3_IOS_VER_STR "%s"\n' "$BT3_IOS_VER"
@@ -63,7 +63,7 @@ jobs:
           BT3_CC: ios64
           BT3_SKELETON: "1"
           BT3_BUILD_KEY: ${{ secrets.BT3_BUILD_KEY }}
-          BT3_IOS_VER: 1.0.112
+          BT3_IOS_VER: 1.0.129
         run: |
           set -o pipefail
           { python3 port/tools/undefined.py && python3 port/tools/link.py && python3 port/tools/ios_app.py ; } 2>&1 | tee build.log

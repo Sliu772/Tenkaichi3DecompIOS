@@ -42,13 +42,16 @@ La IPA y los mods comparten la misma carpeta de MediaFire. El enlace es permanen
 <details>
 <summary><strong>Verificar la descarga de la 1.0.158 (SHA-256)</strong></summary>
 
+```text
+996C28AC8FCA53206F9AC99AD863C15476E5E88ED3DAFB460BC5562E057C1372
+```
 
 Tamaño: **11.272.592 bytes**. El hash corresponde a la IPA pública sin firmar; al firmarla con Sideloadly o AltStore se crea una copia distinta, y eso es normal.
 
 </details>
 
-> [!NOTE]
-> La **build pública** no incluye el modo IA experimental. El juego, el online y el hub BT4 son los mismos.
+>
+>
 
 ## Novedades de la 1.0.158
 

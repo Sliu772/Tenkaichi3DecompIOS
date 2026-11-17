@@ -15,7 +15,7 @@ No es un emulador: es el código del juego decompilado y compilado para iOS, con
 </p>
 
 <p>
-<a href="https://www.youtube.com/@Sliu-772"><img src="https://img.shields.io/badge/Descargar-IPA-ff8a00?style=for-the-badge&logo=apple&logoColor=white" alt="Descargar la IPA"></a>
+<a href="https://bt3-online.onrender.com/"><img src="https://img.shields.io/badge/Descargar-IPA-ff8a00?style=for-the-badge&logo=apple&logoColor=white" alt="Descargar la IPA"></a>
 <a href="https://ko-fi.com/sliu"><img src="https://img.shields.io/badge/Ko--fi-Apoyar-ff5e5b?style=for-the-badge&logo=kofi&logoColor=white" alt="Apoyar en Ko-fi"></a>
 <a href="https://www.youtube.com/@Sliu-772"><img src="https://img.shields.io/badge/YouTube-Sliu-ff0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube de Sliu"></a>
 </p>
@@ -33,11 +33,11 @@ Hecho por **Sliu / LX772**, sobre el trabajo de **z3xox** ([Tenkaichi3Decomp](ht
 
 | Qué | Versión | Dónde |
 | --- | --- | --- |
-| **IPA de BT3 Online** (BT3 + hub BT4) | 1.0.158 beta | **[MediaFire](https://www.youtube.com/@Sliu-772)** |
-| **Mods y extras** | — | **[La misma carpeta de MediaFire](https://www.youtube.com/@Sliu-772)** |
+| **IPA de BT3 Online** (BT3 + hub BT4) | 1.0.158 beta | **[Web oficial](https://bt3-online.onrender.com/)** |
+| **Mods y extras** | — | **[Web oficial · Mods](https://bt3-online.onrender.com/#mods)** |
 | **Código fuente del port** | — | Disponible a solicitud (ver [Licencia](#licencia)) |
 
-La IPA y los mods comparten la misma carpeta de MediaFire. El enlace es permanente; si el archivo se actualiza, se descarga la última versión publicada.
+La IPA y los mods se descargan desde la **[web oficial](https://bt3-online.onrender.com/)**. El enlace es permanente; si el archivo se actualiza, se descarga la última versión publicada.
 
 <details>
 <summary><strong>Verificar la descarga de la 1.0.158 (SHA-256)</strong></summary>
@@ -111,7 +111,7 @@ Tamaño: **11.272.592 bytes**. El hash corresponde a la IPA pública sin firmar;
 
 ## Instalación y primer arranque
 
-1. Descarga la **IPA** desde **[MediaFire](https://www.youtube.com/@Sliu-772)**.
+1. Descarga la **IPA** desde **[la web oficial](https://bt3-online.onrender.com/)**.
 2. Instálala con Sideloadly, AltStore o la herramienta que uses. Se firma con tu certificado.
 3. En el iPhone abre **Archivos → En mi iPhone → BT3 Online** y copia ahí tu **`.iso`**. Solo `.iso`; si tienes `.bin/.cue`, conviértelo antes.
 4. Abre **BT3 Online**. La primera vez prepara los datos del juego con una pantalla de progreso:
@@ -289,7 +289,7 @@ Límites:
 - Un mod **no puede escribir la memoria del juego** ni cambiar el resultado de una pelea. Puede leer la pelea y dibujar; por eso funciona online y en repeticiones sin desincronizar.
 - Los mods de script no son lo mismo que los mods de ISO que reemplazan archivos del disco (texturas, modelos, voces).
 
-
+Los mods que comparto están en la **web oficial**, en la sección **[Mods](https://bt3-online.onrender.com/#mods)**.
 
 ## Controles
 

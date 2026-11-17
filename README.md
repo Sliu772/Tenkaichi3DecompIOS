@@ -15,7 +15,7 @@ No es un emulador: es el código del juego decompilado y compilado para iOS, con
 </p>
 
 <p>
-<a href="https://shrinkme.click/HgvG"><img src="https://img.shields.io/badge/Descargar-IPA-ff8a00?style=for-the-badge&logo=apple&logoColor=white" alt="Descargar la IPA"></a>
+<a href="https://www.youtube.com/@Sliu-772"><img src="https://img.shields.io/badge/Descargar-IPA-ff8a00?style=for-the-badge&logo=apple&logoColor=white" alt="Descargar la IPA"></a>
 <a href="https://ko-fi.com/sliu"><img src="https://img.shields.io/badge/Ko--fi-Apoyar-ff5e5b?style=for-the-badge&logo=kofi&logoColor=white" alt="Apoyar en Ko-fi"></a>
 <a href="https://www.youtube.com/@Sliu-772"><img src="https://img.shields.io/badge/YouTube-Sliu-ff0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube de Sliu"></a>
 </p>
@@ -33,8 +33,8 @@ Hecho por **Sliu / LX772**, sobre el trabajo de **z3xox** ([Tenkaichi3Decomp](ht
 
 | Qué | Versión | Dónde |
 | --- | --- | --- |
-| **IPA de BT3 Online** (BT3 + hub BT4) | 1.0.158 beta | **[MediaFire](https://shrinkme.click/HgvG)** |
-| **Mods y extras** | — | **[La misma carpeta de MediaFire](https://shrinkme.click/HgvG)** |
+| **IPA de BT3 Online** (BT3 + hub BT4) | 1.0.158 beta | **[MediaFire](https://www.youtube.com/@Sliu-772)** |
+| **Mods y extras** | — | **[La misma carpeta de MediaFire](https://www.youtube.com/@Sliu-772)** |
 | **Código fuente del port** | — | Disponible a solicitud (ver [Licencia](#licencia)) |
 
 La IPA y los mods comparten la misma carpeta de MediaFire. El enlace es permanente; si el archivo se actualiza, se descarga la última versión publicada.
@@ -111,7 +111,7 @@ Tamaño: **11.272.592 bytes**. El hash corresponde a la IPA pública sin firmar;
 
 ## Instalación y primer arranque
 
-1. Descarga la **IPA** desde **[MediaFire](https://shrinkme.click/HgvG)**.
+1. Descarga la **IPA** desde **[MediaFire](https://www.youtube.com/@Sliu-772)**.
 2. Instálala con Sideloadly, AltStore o la herramienta que uses. Se firma con tu certificado.
 3. En el iPhone abre **Archivos → En mi iPhone → BT3 Online** y copia ahí tu **`.iso`**. Solo `.iso`; si tienes `.bin/.cue`, conviértelo antes.
 4. Abre **BT3 Online**. La primera vez prepara los datos del juego con una pantalla de progreso:

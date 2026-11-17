@@ -289,7 +289,7 @@ Límites:
 - Un mod **no puede escribir la memoria del juego** ni cambiar el resultado de una pelea. Puede leer la pelea y dibujar; por eso funciona online y en repeticiones sin desincronizar.
 - Los mods de script no son lo mismo que los mods de ISO que reemplazan archivos del disco (texturas, modelos, voces).
 
-Los mods que comparto están en **la misma carpeta de MediaFire que la IPA**: **[MediaFire](https://shrinkme.click/HgvG)**.
+
 
 ## Controles
 
